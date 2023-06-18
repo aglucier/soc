@@ -12,9 +12,7 @@ module sprom#(
   logic [DATA_W-1:0] rom [0:ROM_DEPTH-1]
 
 
-  always_ff (posedge clk) begin
-    dout <= rom[addr];
-  end
+  assign dout = rom[addr];
 
 
 endmodule
